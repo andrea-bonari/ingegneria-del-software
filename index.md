@@ -1,3 +1,4 @@
 Il corso di Ingegneria del Software fornisce le competenze necessarie per progettare e realizzare applicazioni software complesse, introducendo il ciclo di vita del software e i principi della progettazione orientata agli oggetti. Si studiano UML, con particolare attenzione ai diagrammi delle classi e di sequenza, e il linguaggio Java per la definizione di classi e metodi. Vengono approfonditi i design pattern, i principi della programmazione funzionale in Java e le tecniche di test funzionale e strutturale per verificare la correttezza del software. Inoltre, il corso introduce la programmazione di rete e distribuita e la progettazione di interfacce utente.
 
 1. [[Introduzione al corso]]
+2. [[Ingegneria del software]]
