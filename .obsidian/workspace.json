@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programmazione ad oggetti/Unified Modeling Language.md",
+                "file": "Ingegneria del software/Linguaggio Java/Linguaggio Java.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Unified Modeling Language"
+              "title": "Linguaggio Java"
             }
           }
         ]
@@ -169,24 +169,26 @@
   },
   "active": "72cabd4d4eb0d8a9",
   "lastOpenFiles": [
+    "index.md",
+    "Ingegneria del software/Linguaggio Java/Linguaggio Java.md",
+    "Dispensa Csharp.md",
+    "Ingegneria del software/Programmazione ad oggetti/Unified Modeling Language.md",
+    "Ingegneria del software/Linguaggio Java",
     "data/Pasted image 20250922162626.png",
     "data/Pasted image 20250922162535.png",
     "data/Pasted image 20250922162426.png",
     "data/Pasted image 20250922162144.png",
     "data/Pasted image 20250922162117.png",
     "data/Pasted image 20250922162002.png",
-    "index.md",
-    "Programmazione ad oggetti/Unified Modeling Language.md",
     "data/Pasted image 20250922150941.png",
     "data/Pasted image 20250922150702.png",
     "data/Pasted image 20250922150802.png",
     "data/Pasted image 20250922150548.png",
-    "data/Pasted image 20250922145902.png",
-    "Programmazione ad oggetti/Programmazione ad oggetti.md",
+    "Ingegneria del software/Programmazione ad oggetti/Programmazione ad oggetti.md",
     "Ingegneria del software/Untitled",
     "Ingegneria del software/Ingegneria del software.md",
     "temp/09-15.md",
-    "Programmazione ad oggetti",
+    "Ingegneria del software/Programmazione ad oggetti",
     "data",
     "Ingegneria del software",
     "temp",
@@ -209,11 +211,9 @@
     "Equazioni differenziali/EDO del primo ordine/EDO del primo ordine.md",
     "Equazioni differenziali/EDO del secondo ordine/EDO del secondo ordine lineari omogenee a coefficienti costanti.md",
     "Equazioni differenziali/EDO del secondo ordine/EDO del secondo ordine lineari non omogenee.md",
-    "Sistemi differenziali lineari/Sistemi differenziali lineari.md",
     "Equazioni differenziali/Studio qualitativo",
     "Funzioni a più variabili/Calcolo integrale",
     "Funzioni a più variabili/Ottimizzazione",
-    "Funzioni a più variabili/Calcolo differenziale",
-    "Funzioni a più variabili"
+    "Funzioni a più variabili/Calcolo differenziale"
   ]
 }

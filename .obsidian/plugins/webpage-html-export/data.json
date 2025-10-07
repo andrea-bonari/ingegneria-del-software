@@ -10,7 +10,7 @@
     "exportPath": "/output",
     "filesToExport": [
       "Ingegneria del software",
-      "Programmazione ad oggetti",
+      "Ingegneria del software/Programmazione ad oggetti",
       "index.md",
       "Introduzione al corso.md"
     ],
