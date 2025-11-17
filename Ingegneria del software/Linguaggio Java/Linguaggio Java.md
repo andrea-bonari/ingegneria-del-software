@@ -80,6 +80,20 @@ Superclasse p = new Sottoclasse(...);
 Sottoclasse p = new Superclasse(...);
 ```
 
+>[!tip] Tipo Object
+>Di base una classe in Java eredita implicitamente da da `java.lang.Object` i seguenti metodi:
+>- `string toString()`: Una rappresentazione testuale dell'oggetto, di base è `NomeClasse@identificativo`.
+>- `boolean equals(Object o)`: Definisce l'eguaglianza logica, di base confronta i riferimenti.
+>- `int hashCode()`: Restituisce un intero "hash" dell'oggetto, usato in strutture come `HashMap` e `HashSet`. Di base se due oggetti sono `equals` hanno lo stesso `hashCode`.
+
+>[!tip] Istruzione istanceof
+>L'istruzione istanceof controlla a runtime il tipo dell'oggetto. Per esempio:
+>```java
+>Object x = new Persona("Lia", 20);
+>if(x istanceof Persona p) {
+>	System.out.println(p.nome);
+>}
+>```
 ### Specifica static
 >[!note]
 >La specifica `static` rende l'elemento a cui è assegnata appartenente all'intera classe, anziché ad una sua singola istanza, di fatto rendendolo un singolo elemento unico e condiviso.
@@ -112,6 +126,7 @@ Sottoclasse p = new Superclasse(...);
 >Quando si marca un metodo con `final` questo non può essere sovrascritto o nascosto. 
 
 Nelle classi si può marcare gli attributi come `final` e poi inizializzarle nel costruttore.
+
 ### Switch
 >[!note]
 >In java l'istruzione `switch` può essere sia uno statement che un espressione, e quindi può restituire un valore come può non farlo. La sintassi dello statement è:
@@ -179,7 +194,7 @@ Nelle classi si può marcare gli attributi come `final` e poi inizializzarle nel
 >	
 >	@override
 >	public void draw() {
->		System.out.prinln("▲");
+>		System.out.println("▲");
 >	}
 >}
 >```
@@ -198,6 +213,177 @@ Nelle classi si può marcare gli attributi come `final` e poi inizializzarle nel
 >}
 >
 >public abstract class Polygon implements Drawable {
+>	// ...
+>}
+>```
+
+### Package
+>[!note]
+>Un package è un insieme di classi organizzate in namespace gerarchici, mappati su directory del file system. I namespace hanno due scopi principali: Organizzazione e Visibilità.
+>
+>Per creare un package si crea una struttura di cartelle `it/polimi/ingsw/corso` e nel file java della classe si dichiara il package come 
+>```java
+>package it.polimi.ingsw.corso;
+>```
+>
+>I nomi dei package seguono la convenzione del dominio inverso per garantire unicità globale. Per poi usare le classi in file java si può usare il fully qualified name oppure usare l'istruzione `import`.
+
+Si nota che esiste il modificatore di accessibilità `friendly`, che indica l'accessibilità solo nel package e nessun override da fuori package
+
+### Gestione degli errori
+>[!note]
+>Di base un'eccezione interrompe il flusso di controllo normale. Un'eccezione è un qualunque oggetto di una classe che estende `Exception` (checked) o `RuntimeException` (unchecked), che a loro volta estendono da `Throwable`.
+>
+>Le eccezioni devono essere catturate usando il blocco try-catch o dichiarate con throws:
+>```java
+>import java.util.List;
+>import java.util.ArrayList;
+>
+>public class EmptyCorsoException extends Exception {
+>	public EmptyCorsoException(String message) {
+>		super(message)
+>	}
+>}
+>
+>class Student {
+>	final String name: final int age;
+>	Student(String name, int age) {
+>		this.name = name;
+>		this.age = age;
+>	}
+>}
+>
+>class Corso {
+>	private final List<Student> studenti = new ArrayList();
+>	
+>	public void addStudenti(Student s) {
+>		studenti.add(s);
+>	}
+>	
+>	public float etaMedia() throws EmptyCorsoException {
+>		if(student.isEmpty()) {
+>			throw new EmptyCorsoException("Corso vuoto: impossibile calcolare l'età media");
+>		}
+>		
+>		int somma = 0;
+>		for (Student s: studenti) somma += s.age;
+>		return (float) somma / studenti.size();
+>	}
+>}
+>```
+>
+>```java
+>Corso c = new Corso();
+>
+>try {
+>	float media = c.etaMedia();
+>	System.out.println("Età media: " + media);
+>} catch (EmptyCorsoException e) {
+>	System.out.println(e.getMessage());
+>}
+>```
+>
+>In caso non gestita l'eccezione è propagata automaticamente.
+
+È possibile avere più blocchi `catch` con eccezioni diverse da gestire.
+
+>[!tip] Gerarchia della gestione degli errori
+>- `Throwable`: è la superclasse di tutto ciò che può essere lanciato.
+>	- `Error`: segnala problemi gravi che il programma non può o non deve tentare di risolvere.
+>	- `Exception`: segnala condizioni anomale che il programma può e deve tentare di gestire o recuperare.
+>		- `RuntimeException`
+
+>[!tip] Metodi di un eccezione
+>- `getMessage()`: restituisce la stringa descrittiva dell'errore. È il messaggio che è stato fornito quando l'eccezione è stata creata.
+>- `printStackTrace()`: stampa l'intera stack trace su `stderr`.
+>- `toString()`: restituisce una rappresentazione testuale dell'eccezione.
+
+>[!tip] Blocco finally
+>Ad un costrutto try-catch può essere associato anche un blocco `finally`, che contiene del codice che dev'essere sempre essere eseguito prima di gestire l'eccezione o propagarla al chiamante.
+>
+>Da Java 7 esiste il costrutto Try-With-Resources, dove è possibile passare un oggetto che implementa `autoClosable` tra parentesi tonde e garantisce la chiusura di tali risorse senza un blocco finally esplicito.
+
+### Generics
+>[!note]
+>I generics sono un meccanismo che permette di scrivere classi, interfacce e metodi che possono operare su tipi di dati diversi mantenendo il controllo dei tipi a compile time.
+>
+>```
+>public class Pair <T, U> {
+>	private final T first;
+>	private final U second;
+>	
+>	public Pair(T first, U second) {
+>		this.first = first;
+>		this.second = second;
+>	}
+>	
+>	public T getFirst() {
+>		return first;
+>	}
+>	
+>	public U getSecond() {
+>		return second;
+>	}
+>}
+>```
+
+>[!tip] Type Erasure
+>La type erasure è il meccanismo attraverso il quale il compilatore Java rimuove tutte le informazione sui parametri di tipo generico dopo che il codice è stato compilato.
+>
+>È stata introdotta per garantire la retrocompatibilità con le versione di java precedenti all'introduzione dei Generics.
+
+I generics non sono polimorfici nel senso classico del termine, ma introducono un concetto chiamato invarianza per proteggere la sicurezza dei tipi. La invarianza indica che se è vero che `String` è sottotipo di `Object`, `Pair<String>` non è né sovratipo né sottotipo di `Pair<Object>`.
+### Collections
+>[!note]
+>Le collections sono un insieme di interfacce e classi pronte all'uso per manipolare e gestire dati. Le collections principali sono:
+>- `List`: collezione contigua di elementi, accessibili tramite indice. Ne derivano `ArrayList` e `LinkedList`.
+>- `Set`: collezione di elementi senza duplicati. Ne derivano `NavigableSet` e `HashSet`.
+>- `Map`: dizionari, usati per cercare rapidamente un elemento tramite chiave.
+
+### Iterator
+>[!note]
+>Un oggetto è detto iterable se implementa `Iterable<T>`, dove deve definire un metodo `Iterator<T> iterator()`, introducendo un ordine di visita, cambiabile tra iterazioni.
+>
+>Un `Iterator` conosce come scorrere una collezione. È necessario che overridare `boolean hasNext()` e `T next()`. In più può anche overridare `remove()` e `forEachRemaining(Consumer<? super T>)`.
+>
+>```java
+>public class Collection<T> implements Iterable<T> {
+>	private T[] elements;
+>	private int size;
+>	
+>	@override
+>	public Iterator<T> iterator() {
+>		return new CollectionIterator();
+>	}
+>	
+>	private class CollectionIterator implements Iterator<T> {
+>		private int index = 0;
+>	
+>		@override
+>		public boolean hasNext() {
+>			return index < size;
+>		}
+>		
+>		@override
+>		public T next() {
+>			if(!hasNext()) {
+>				throw new NoSuchElementException("No more elements in iterator");
+>			}
+>			
+>			return elements[index++];
+>		}
+>	}
+>}
+>```
+>
+>Permettono di astrarre dalla struttura interna la collezione. Sono utilizzabili anche per collezioni infinite o stream di input.
+>
+>Si ha che `next()` deve sollevare `NoSuchElementException` se non ci sono più elementi.
+>
+>Da parte del chiamante possono essere utilizzati tramite:
+>```java
+>Iterator<T> it = collection.iterator();
+>while (it.hasNext()) {
 >	// ...
 >}
 >```

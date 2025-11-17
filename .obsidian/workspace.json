@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ingegneria del software/Linguaggio Java/Linguaggio Java.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Linguaggio Java"
+              "title": "index"
             }
           }
         ]
@@ -169,10 +169,16 @@
   },
   "active": "72cabd4d4eb0d8a9",
   "lastOpenFiles": [
-    "index.md",
-    "Ingegneria del software/Linguaggio Java/Linguaggio Java.md",
-    "Dispensa Csharp.md",
+    "Ingegneria del software/Programmazione ad oggetti/Programmazione ad oggetti.md",
     "Ingegneria del software/Programmazione ad oggetti/Unified Modeling Language.md",
+    "Ingegneria del software/Ingegneria del software.md",
+    "index.md",
+    "Ingegneria del software/Linguaggio Java/Java concorrente.md",
+    "Ingegneria del software/Linguaggio Java/Java funzionale.md",
+    "Ingegneria del software/Linguaggio Java/Linguaggio Java.md",
+    "Ingegneria del software/Testing",
+    "Ingegneria del software/Design patterns",
+    "Dispensa Csharp.md",
     "Ingegneria del software/Linguaggio Java",
     "data/Pasted image 20250922162626.png",
     "data/Pasted image 20250922162535.png",
@@ -184,9 +190,6 @@
     "data/Pasted image 20250922150702.png",
     "data/Pasted image 20250922150802.png",
     "data/Pasted image 20250922150548.png",
-    "Ingegneria del software/Programmazione ad oggetti/Programmazione ad oggetti.md",
-    "Ingegneria del software/Untitled",
-    "Ingegneria del software/Ingegneria del software.md",
     "temp/09-15.md",
     "Ingegneria del software/Programmazione ad oggetti",
     "data",
@@ -208,12 +211,8 @@
     "Serie di funzioni/Serie di funzioni trigonometriche.md",
     "Serie di funzioni/Serie di potenze reali.md",
     "Serie di funzioni/Serie di funzioni.md",
-    "Equazioni differenziali/EDO del primo ordine/EDO del primo ordine.md",
-    "Equazioni differenziali/EDO del secondo ordine/EDO del secondo ordine lineari omogenee a coefficienti costanti.md",
-    "Equazioni differenziali/EDO del secondo ordine/EDO del secondo ordine lineari non omogenee.md",
     "Equazioni differenziali/Studio qualitativo",
     "Funzioni a più variabili/Calcolo integrale",
-    "Funzioni a più variabili/Ottimizzazione",
-    "Funzioni a più variabili/Calcolo differenziale"
+    "Funzioni a più variabili/Ottimizzazione"
   ]
 }
