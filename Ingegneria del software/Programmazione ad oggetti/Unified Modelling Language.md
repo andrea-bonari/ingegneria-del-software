@@ -1,5 +1,5 @@
 >[!note]
->Unified Modeling Language (UML) è un linguaggio di modellazione utilizzato per lo sviluppo software, più nel dettaglio per la progettazione e l'analisi di sistemi. Rappresenta un set di notazioni e regole per creare un modello della logica interna dell'applicativo.
+>Unified Modelling Language (UML) è un linguaggio di modellazione utilizzato per lo sviluppo software, più nel dettaglio per la progettazione e l'analisi di sistemi. Rappresenta un set di notazioni e regole per creare un modello della logica interna dell'applicativo.
 >
 >I principali diagrammi definiti dall'UML sono i diagrammi di struttura, i diagrammi di comportamento e i diagrammi di interazione. Assieme descrivono i requisiti del sistema, quali funzionalità devono essere offerte e chi le usa, senza affrontare la descrizione di come sono realizzate.
 
