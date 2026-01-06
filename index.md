@@ -18,6 +18,5 @@ Il corso di Ingegneria del Software fornisce le competenze necessarie per proget
 		2. [[Testing strutturale]]
 	2. [[Test di integrazione]]
 7. [[Astrazioni funzionali e procedurali]]
-	1. [[Astrazioni sui dati]]
-	2. [[Estensioni]]
+	1. [[Estensioni]]
 8. [[Programmazione distribuita]]

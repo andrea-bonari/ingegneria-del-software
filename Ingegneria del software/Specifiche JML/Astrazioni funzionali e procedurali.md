@@ -140,3 +140,38 @@ I vincoli esprimibili da JML si categorizzano in:
 >
 >Nelle funzioni quantificatrici e quantificatore numerico l'ultimo campo agisce come filtro che determina quali valori contare.
 
+### Astrazioni sui dati
+>[!note]
+>Con JML è possibile descrivere un nuovo tipo di dato astratto indicando valori e operazioni possibili.
+>In questo modo, astraendo dai dettagli di rappresentazione dei valori e d'implementazione delle operazioni, il resto del programma dipende solo dalla specifica del tipo.
+
+Siccome nelle classi i metodi possono agire sulle variabili di stato, non basta quanto visto per le astrazioni procedurali.
+
+Si nota che i metodi pubblici puri (che non introducono side effects) sono indicati con `/*@ pure @*/`.
+
+>[!example]
+>Un esempio di metodo puro è size, che restituisce il numero di elementi di un contenitore, mentre un esempio di metodo non puro è insert.
+>```
+>public int /*@ pure @*/ size() { ... }
+>
+>//@ ensures size()==\old(size())+1
+>public void insert(...) { ... }
+>```
+
+>[!tip] Mutabilità
+>Un dato si dice mutabile quando ha metodi modificatori, cioè ha dei metodi che modificano lo stato dell'oggetto su cui vengono chiamati.
+
+>[!tip] Specifica `spec_public`
+>La specifica `spec_public` permette di utilizzare un oggetto astratto tipico (OAT), che è un'implementazione astratta, generalmente la più semplice possibile.
+>
+>```
+>//@ spec_public List<T> oat;
+>
+>//@ ensures \result == aot.size();
+>public /*@ pure @*/ int size() { ... }
+>```
+
+>[!tip] Proprietà astratte
+>Le proprietà astratte predicano su cose che sono valide per tutti gli oggetti in generale, ne esistono due tipi:
+>- Proprietà invarianti: proprietà degli strati astratti invarianti.
+>- Proprietà evolutive: proprietà sulla relazione tra uno stato e quello successivo.

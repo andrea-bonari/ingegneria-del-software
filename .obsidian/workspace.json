@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "Ingegneria del software/Programmazione ad oggetti/Unified Modelling Language.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "Unified Modelling Language"
             }
           }
         ]
@@ -169,12 +169,14 @@
   },
   "active": "72cabd4d4eb0d8a9",
   "lastOpenFiles": [
-    "Ingegneria del software/Design patterns/Pattern architetturali.md",
     "index.md",
+    "Ingegneria del software/Socket/Programmazione distribuita.md",
+    "Ingegneria del software/Specifiche JML/Estensioni.md",
+    "Ingegneria del software/Specifiche JML/Astrazioni funzionali e procedurali.md",
+    "Ingegneria del software/Specifiche JML/Astrazioni sui dati.md",
+    "Ingegneria del software/Design patterns/Pattern architetturali.md",
     "Ingegneria del software/Ingegneria del software.md",
     "Ingegneria del software/Programmazione ad oggetti/Unified Modelling Language.md",
-    "Ingegneria del software/Specifiche JML/Astrazioni sui dati.md",
-    "Ingegneria del software/Specifiche JML/Astrazioni funzionali e procedurali.md",
     "Ingegneria del software/Specifiche/Specifica.md",
     "Ingegneria del software/Testing/Test di integrazione.md",
     "Ingegneria del software/Testing/Testing strutturale.md",
@@ -184,8 +186,6 @@
     "Introduzione al corso.md",
     "Ingegneria del software/Testing/Testing.md",
     "data/Pasted image 20251125150646.png",
-    "Ingegneria del software/Socket/Programmazione distribuita.md",
-    "Ingegneria del software/Specifiche JML/Estensioni.md",
     "Ingegneria del software/Socket",
     "Ingegneria del software/Specifiche JML",
     "data/Pasted image 20251124175228.png",
